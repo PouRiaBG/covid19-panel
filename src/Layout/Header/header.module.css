@@ -1,0 +1,15 @@
+.container {
+  height: 5rem;
+  border-bottom: 1px solid #eff0f4;
+  display: flex;
+}
+.searchBox {
+  flex: 1;
+  display: flex;
+}
+.input {
+  border: none;
+}
+.account {
+  flex: 1;
+}
