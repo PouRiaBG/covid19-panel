@@ -1,5 +1,5 @@
-import { SearchOutlined } from "@ant-design/icons";
-import { Input } from "antd";
+import { SearchOutlined, UserOutlined } from "@ant-design/icons";
+import { Avatar, Input } from "antd";
 import styles from "./header.module.css";
 export function Header() {
   return (
@@ -13,7 +13,10 @@ export function Header() {
           bordered={false}
         />
       </div>
-      <div className={styles.account}>Account</div>
+      <div className={styles.account}>
+        <p>Login</p>
+        <Avatar size={44} icon={<UserOutlined />} />
+      </div>
     </header>
   );
 }

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import { Dashboard } from "./Pages/Dashboard";
-import { Layout } from "./Layout/Layout/Layout";
+import { Layout } from "./components/Layout/Layout/Layout";
 
 import { Countries } from "./Pages/Countries";
 import "antd/dist/antd.css";
