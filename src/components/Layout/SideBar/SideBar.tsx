@@ -22,7 +22,7 @@ export function SideBar() {
                 icon={<BarChartOutlined />}
                 type="text"
                 size="large"
-                style={{ fontSize: "1.2rem" }}
+                // style={{ fontSize: "1.2rem" }}
               >
                 Dashboard
               </Button>
@@ -31,7 +31,7 @@ export function SideBar() {
           <li>
             <Link to="/countries">
               <Button
-                style={{ fontSize: "1.2rem" }}
+                // style={{ fontSize: "1.2rem" }}
                 icon={<AppstoreOutlined />}
                 type="text"
                 size="large"
@@ -44,7 +44,7 @@ export function SideBar() {
           <li>
             <Link to="/vaccine">
               <Button
-                style={{ fontSize: "1.2rem" }}
+                // style={{ fontSize: "1.2rem" }}
                 icon={<UserSwitchOutlined />}
                 type="text"
                 size="large"
@@ -56,7 +56,7 @@ export function SideBar() {
           <li>
             <Link to="news">
               <Button
-                style={{ fontSize: "1.2rem" }}
+                // style={{ fontSize: "1.2rem" }}
                 icon={<ExclamationCircleOutlined />}
                 type="text"
                 size="large"
@@ -73,7 +73,7 @@ export function SideBar() {
           <li>
             <Link to="F&Q">
               <Button
-                style={{ fontSize: "1.3rem" }}
+                // style={{ fontSize: "1.3rem" }}
                 icon={<UserSwitchOutlined />}
                 type="text"
                 size="large"
@@ -85,7 +85,7 @@ export function SideBar() {
           <li>
             <Link to="settings">
               <Button
-                style={{ fontSize: "1.3rem" }}
+                // style={{ fontSize: "1.3rem" }}
                 icon={<SettingOutlined />}
                 type="text"
                 size="large"
