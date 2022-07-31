@@ -5,6 +5,6 @@
 .card {
   padding: 4rem 5rem;
   border-radius: 1rem;
-  background-color: white;
+  background-color: #f3f3f3;
   flex-wrap: wrap;
 }
