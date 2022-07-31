@@ -133,7 +133,7 @@ const columns: ColumnsType<DataType> = [
 ];
 
 export function Countries() {
-  const { data: Countries, isLoading } = useQuery(["countri"], async () => {
+  const { data: Countries, isLoading } = useQuery(["countries"], async () => {
     return fetch(
       `https://disease.sh/v3/covid-19/countries/${encodeURI(String(countries))}`
     )
@@ -146,17 +146,18 @@ export function Countries() {
   }
   return (
     <>
-      <Table
-        scroll={{ y: tableHeight }}
-        pagination={false}
-        columns={columns}
-        dataSource={Countries}
-        loading={isLoading}
-        rowClassName={(record, index) => {
-          const isIndexOdd = isOdd(index);
-          return isIndexOdd ? styles.oddRows : "";
-        }}
-      />
+      {!isLoading && (
+        <Table
+          scroll={{ y: tableHeight }}
+          pagination={false}
+          columns={columns}
+          dataSource={Countries}
+          rowClassName={(record, index) => {
+            const isIndexOdd = isOdd(index);
+            return isIndexOdd ? styles.oddRows : "";
+          }}
+        />
+      )}
     </>
   );
 }
