@@ -66,12 +66,13 @@ const countries = [
 const columns: ColumnsType<DataType> = [
   {
     title: "Flag",
-    dataIndex: "countryInfo",
+
     width: 100,
+    dataIndex: "countryInfo",
+    responsive: ["xxl", "xs"],
     render: (info) => {
       return (
         <span>
-          {/* <img src={info.flag} /> */}
           <Avatar src={info.flag} shape="square" />
         </span>
       );
@@ -85,18 +86,24 @@ const columns: ColumnsType<DataType> = [
   {
     title: "Total cases",
     dataIndex: "cases",
+    responsive: ["xs"],
+
     width: 200,
   },
 
   {
     title: "Total Deaths",
     dataIndex: "deaths",
+
     width: 200,
+    responsive: ["xs"],
   },
   {
     title: "Today cases",
     dataIndex: "todayCases",
+
     width: 200,
+    responsive: ["xxl", "xs", "xl"],
     render: (data) => {
       return (
         <span style={{ color: "#63B4A1 " }}>
@@ -111,7 +118,9 @@ const columns: ColumnsType<DataType> = [
   {
     title: "Today Deaths",
     dataIndex: "todayDeaths",
+
     width: 200,
+    responsive: ["xxl", "xs", "xl"],
     render: (data) => {
       return (
         <span style={{ color: "red" }}>
@@ -122,13 +131,16 @@ const columns: ColumnsType<DataType> = [
     },
   },
   {
+    width: 200,
     title: "Total Recovered",
     dataIndex: "recovered",
-    width: 200,
+    responsive: ["xxl"],
   },
   {
+    width: 200,
     title: "Active cases",
     dataIndex: "active",
+    responsive: ["xxl"],
   },
 ];
 
@@ -146,8 +158,10 @@ export function Countries() {
   }
   return (
     <>
-      {!isLoading && (
+      <div className={styles.container}>
         <Table
+          loading={isLoading}
+          tableLayout="auto"
           scroll={{ y: tableHeight }}
           pagination={false}
           columns={columns}
@@ -157,7 +171,7 @@ export function Countries() {
             return isIndexOdd ? styles.oddRows : "";
           }}
         />
-      )}
+      </div>
     </>
   );
 }
