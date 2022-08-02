@@ -144,7 +144,7 @@ const columns: ColumnsType<DataType> = [
   },
 ];
 
-export function Countries() {
+export function CountriesScreen() {
   const { data: Countries, isLoading } = useQuery(["countries"], async () => {
     return fetch(
       `https://disease.sh/v3/covid-19/countries/${encodeURI(String(countries))}`
