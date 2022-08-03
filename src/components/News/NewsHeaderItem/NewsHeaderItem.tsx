@@ -12,10 +12,10 @@ export function NewsHeaderItem(props: IProps) {
   const { context, date, title, height, width } = props;
 
   return (
-    <div className={styles.image}>
+    <div className={styles.itemContainer}>
       <h4 className={styles.info}>{context.toUpperCase()}</h4>
-      <h3 className={styles.info}>{title}</h3>
-      <h4 className={styles.info}>{date}</h4>
+      <h5 className={styles.info}>{title}</h5>
+      <h4 className={styles.info}>{date}</h4>j
     </div>
   );
 }
