@@ -1,16 +1,17 @@
 import { Route, Routes } from "react-router";
-import { Dashboard } from "./Pages/DashboardScreen";
+import { DashboardScreen } from "./Pages/DashboardScreen";
+
+import { VaccineScreen } from "./Pages/VaccineScreen";
+import { NewsScreen } from "./Pages/NewsScreen";
+import { SettingsScreen } from "./Pages/SettingsScreen";
+import { CountriesScreen } from "./Pages/CountriesScreen";
+
 import { Layout } from "./components/Layout/Layout/Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import { Countries } from "./Pages/CountriesScreen";
 import "antd/dist/antd.css";
 
 import "./index.css";
-import { Vaccine } from "./Pages/VaccineScreen";
-import { News } from "./Pages/NewsScreen";
-import { Settings } from "./Pages/SettingsScreen";
-
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -18,11 +19,11 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Dashboard />} />
-            <Route path="countries" element={<Countries />} />
-            <Route path="vaccine" element={<Vaccine />} />
-            <Route path="news" element={<News />} />
-            <Route path="settings" element={<Settings />} />
+            <Route index element={<DashboardScreen />} />
+            <Route path="countries" element={<CountriesScreen />} />
+            <Route path="vaccine" element={<VaccineScreen />} />
+            <Route path="news" element={<NewsScreen />} />
+            <Route path="settings" element={<SettingsScreen />} />
           </Route>
         </Routes>
       </QueryClientProvider>

@@ -1,0 +1,9 @@
+.container {
+  flex: 2;
+  margin-right: 1rem;
+}
+.container article {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
