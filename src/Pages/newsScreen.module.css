@@ -4,5 +4,6 @@
 }
 .articles {
   display: flex;
-  margin-top: 1rem;
+  max-height: calc(100vh - 30rem);
+  overflow-y: auto;
 }
