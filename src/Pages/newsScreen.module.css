@@ -1,9 +1,9 @@
 .container {
   flex: 1;
   padding: 1rem;
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
 }
 .articles {
   display: flex;
-  max-height: calc(100vh - 30rem);
-  overflow-y: auto;
 }

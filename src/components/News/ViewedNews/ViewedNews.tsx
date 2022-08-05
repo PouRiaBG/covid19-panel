@@ -12,6 +12,33 @@ export function ViewedNews() {
         time="May 20 - 8 min read"
         number={1}
       />
+
+      <NewsCard
+        title="CORONAVIRUS"
+        content="
+        Lorem ipsum dolor sit amet. Et quam consequatur At architecto corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum commod i repellendu
+      "
+        time="May 20 - 8 min read"
+        number={1}
+      />
+
+      <NewsCard
+        title="CORONAVIRUS"
+        content="
+        Lorem ipsum dolor sit amet. Et quam consequatur At architecto corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum commod i repellendu
+      "
+        time="May 20 - 8 min read"
+        number={2}
+      />
+
+      <NewsCard
+        title="CORONAVIRUS"
+        content="
+        Lorem ipsum dolor sit amet. Et quam consequatur At architecto corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum commod i repellendu
+      "
+        time="May 20 - 8 min read"
+        number={3}
+      />
     </div>
   );
 }

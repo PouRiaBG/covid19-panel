@@ -89,6 +89,10 @@ select {
 }
 
 @font-face {
+  src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
+  font-family: roboto-bold;
+}
+@font-face {
   src: url("assets/fonts/Roboto/Roboto-Regular.ttf");
   font-family: roboto-reg;
 }

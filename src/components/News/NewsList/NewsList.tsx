@@ -51,6 +51,15 @@ export function NewsList() {
         "
           imgSrc={covidImage}
         />
+
+        <NewsItem
+          title="WORLD"
+          content="
+            corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum
+            commod  i repellendu
+        "
+          imgSrc={covidImage}
+        />
       </article>
     </div>
   );
