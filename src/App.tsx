@@ -1,9 +1,8 @@
 import { Route, Routes } from "react-router";
 import { DashboardScreen } from "./Pages/DashboardScreen";
-
-import { VaccineScreen } from "./Pages/VaccineScreen";
+import { VaccineScreen } from "./Pages/VaccineScreen/VaccineScreen";
 import { NewsScreen } from "./Pages/NewsScreen";
-import { SettingsScreen } from "./Pages/SettingsScreen";
+import { SettingsScreen } from "./Pages/SetttingsScreen";
 import { CountriesScreen } from "./Pages/CountriesScreen";
 
 import { Layout } from "./components/Layout/Layout/Layout";
