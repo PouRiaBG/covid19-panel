@@ -1,0 +1,26 @@
+.item {
+  width: 35rem;
+  margin-left: 3rem;
+}
+.inputGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 35rem;
+  margin-top: 1rem;
+}
+.input {
+  border-radius: 0.5rem;
+  padding: 1rem 1rem;
+  width: 15rem;
+}
+.button {
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #3b548e;
+  padding: 0rem 3rem;
+  border: none;
+  margin-top: 1rem;
+}
+.button:hover {
+  background-color: #3b548e;
+}

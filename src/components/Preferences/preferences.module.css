@@ -1,0 +1,27 @@
+.item {
+  width: 35rem;
+  margin-left: 3rem;
+}
+
+.colorGroup {
+  display: flex !important;
+  justify-content: space-evenly;
+}
+.btn {
+  border-radius: 2rem !important;
+  padding: 1rem;
+  border: none !important;
+}
+.btn::before {
+  content: none !important;
+}
+.blue {
+  background-color: rgb(29, 155, 240) !important;
+}
+
+.yellow {
+  background-color: rgb(255, 212, 0) !important;
+}
+.orange {
+  background-color: rgb(255, 122, 0) !important;
+}

@@ -8,7 +8,7 @@ import { CountriesScreen } from "./Pages/CountriesScreen";
 import { Layout } from "./components/Layout/Layout/Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 
 import "./index.css";
 function App() {
