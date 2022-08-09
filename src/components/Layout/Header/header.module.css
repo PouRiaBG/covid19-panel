@@ -22,3 +22,9 @@
 .info {
   margin-right: 2rem;
 }
+
+.info button {
+  border: none;
+  color: white;
+  background: #3b548e;
+}

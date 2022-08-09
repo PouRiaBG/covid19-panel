@@ -7,33 +7,45 @@
   border-right: 1px solid #eff0f4;
   padding: 0rem 1.5rem;
 }
+.containerTablet {
+  width: 5rem;
+}
 .header {
   width: 100%;
   height: 5rem;
   display: flex;
   align-items: center;
 }
-.list ul {
-  padding: 0px;
-  list-style-type: none;
+.headerTablet {
+  justify-content: center;
 }
-
-.list ul li {
+.items {
+  display: flex;
+  flex-direction: column;
+}
+.itemsTablet {
+  justify-content: center;
+  align-items: center;
+}
+.items a {
   padding: 1rem 0rem;
+}
+.items a:hover {
   border-radius: 1rem;
 }
 
-.list ul li button {
+.items button {
   transition: none;
 }
-.list ul li:hover button {
-  color: white;
-}
-.list ul li:hover {
-  background: #3b548e;
-}
 
-.setting ul {
-  padding: 0px;
-  list-style-type: none;
+.items a > button:hvoer {
+  color: white;
+  transition: none;
+}
+.activeItem {
+  background: #3b548e;
+  border-radius: 1rem;
+}
+.activeItem button {
+  color: white;
 }

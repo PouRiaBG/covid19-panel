@@ -15,7 +15,7 @@ export function Header() {
       </div>
       <div className={styles.account}>
         <div className={styles.info}>
-          <Button type="primary" shape="round">
+          <Button className={styles.btn} shape="round">
             Login
           </Button>
         </div>
