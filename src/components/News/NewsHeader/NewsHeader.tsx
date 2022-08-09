@@ -6,7 +6,7 @@ export function NewsHeader() {
     <div className={styles.container}>
       <section>
         <div className={styles.itemContainer}>
-          <div style={{ width: "50%" }}>
+          <div className={styles.content}>
             <h4 className={styles.info}>IRAN</h4>
             <h3 className={styles.info}>
               Lorem ipsum dolor sit amet. Et quam consequatur At architecto

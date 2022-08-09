@@ -34,3 +34,15 @@
   color: white;
   margin: 0.5rem 0rem;
 }
+.content {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  .container section:first-child {
+    flex: 1;
+  }
+
+  .content {
+    width: 100%;
+  }
+}

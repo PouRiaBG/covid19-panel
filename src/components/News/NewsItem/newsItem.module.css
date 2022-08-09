@@ -14,3 +14,8 @@
   color: #b8becc;
   margin: 0.5rem 0rem;
 }
+@media all and (max-width: 1240px) {
+  .container {
+    width: inherit;
+  }
+}
