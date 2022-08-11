@@ -5,7 +5,7 @@ import { NewsScreen } from "./Pages/NewsScreen";
 import { SettingsScreen } from "./Pages/SetttingsScreen";
 import { CountriesScreen } from "./Pages/CountriesScreen";
 
-import { Layout } from "./features/Layout/Layout/Layout";
+import { Layout } from "./components/Layout/Layout/Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import "antd/dist/antd.min.css";

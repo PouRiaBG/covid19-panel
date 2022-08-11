@@ -9,7 +9,7 @@ interface IProps {
 }
 
 export function NewsHeaderItem(props: IProps) {
-  const { context, date, title, height, width } = props;
+  const { context, date, title } = props;
 
   return (
     <div className={styles.itemContainer}>

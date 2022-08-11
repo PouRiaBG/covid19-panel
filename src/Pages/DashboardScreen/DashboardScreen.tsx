@@ -1,12 +1,11 @@
-import { Chart } from "../../components/Chart/Chart";
-import { Statistics } from "../../components/Statistics/Statistics";
+import { Chart, Stats } from "../../features/Statistics/components";
 import styles from "./dashboard.module.css";
 
 export function DashboardScreen() {
   return (
     <>
       <div className={styles.container}>
-        <Statistics />
+        <Stats />
         <Chart />
       </div>
     </>

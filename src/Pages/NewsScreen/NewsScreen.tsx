@@ -1,6 +1,8 @@
-import { ViewedNews } from "../../components/News/ViewedNews/ViewedNews";
-import { NewsHeader } from "../../components/News/NewsHeader/NewsHeader";
-import { NewsList } from "../../components/News/NewsList/NewsList";
+import {
+  ViewedNews,
+  NewsHeader,
+  NewsList,
+} from "../../features/News/components";
 import styles from "./newsScreen.module.css";
 
 export function NewsScreen() {

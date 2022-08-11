@@ -1,5 +1,7 @@
-import { AccountSettings } from "../../components/AccountSettings/AccountSettings";
-import { Preferences } from "../../components/Preferences/Preferences";
+import {
+  AccountSettings,
+  Preferences,
+} from "../../features/Settings/components";
 import styles from "./settings.module.css";
 export function SettingsScreen() {
   return (
