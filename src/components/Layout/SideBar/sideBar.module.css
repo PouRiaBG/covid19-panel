@@ -49,3 +49,6 @@
 .activeItem button {
   color: white;
 }
+.footerItems {
+  margin-bottom: 1rem;
+}

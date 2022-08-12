@@ -57,6 +57,7 @@ export function SideBar() {
         className={classnames({
           [styles.items]: true,
           [styles.itemsTablet]: isTablet,
+          [styles.footerItems]: true,
         })}
       >
         {isDesktop && (
