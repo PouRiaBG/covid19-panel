@@ -8,3 +8,9 @@
   background-color: #f3f3f3;
   flex-wrap: wrap;
 }
+
+@media all and (max-width: 1280px) {
+  .card {
+    padding: 2rem 1rem;
+  }
+}

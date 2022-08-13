@@ -54,8 +54,8 @@ export const data = {
 export function Chart() {
   return (
     <div className={styles.container}>
-      <div className={styles.chart}>
-        <Line options={options} data={data} />
+      <div className={styles.chartContainer}>
+        <Line className={styles.chart} options={options} data={data} />
       </div>
     </div>
   );

@@ -5,7 +5,12 @@
   align-items: center;
 }
 
+.chartContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
 .chart {
-  width: 60rem;
-  height: 30rem;
+  max-width: 60rem;
+  max-height: 30rem;
 }
