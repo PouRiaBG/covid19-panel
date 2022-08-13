@@ -4,7 +4,6 @@ import styles from "./dashboard.module.css";
 
 export function DashboardScreen() {
   const { isMobile } = useScreen();
-  console.log({ isMobile });
   return (
     <>
       <div className={styles.container}>
