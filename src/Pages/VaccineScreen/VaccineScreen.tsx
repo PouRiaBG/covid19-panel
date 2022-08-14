@@ -1,3 +1,9 @@
+import { Vaccine } from "../../features/vaccine/components/Vaccine";
+
 export function VaccineScreen() {
-  return <div>Vaccine</div>;
+  return (
+    <>
+      <Vaccine />
+    </>
+  );
 }
