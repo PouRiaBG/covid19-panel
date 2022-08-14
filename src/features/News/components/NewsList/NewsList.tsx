@@ -1,13 +1,15 @@
+import { Spinner } from "../../../../components/Spinner/Spinner";
 import { useGetNews } from "../../api/useGetNews";
 import { NewsItem } from "../NewsItem/NewsItem";
 import styles from "./newsList.module.css";
 
 export function NewsList() {
-  const { data } = useGetNews();
+  const { data, isLoading } = useGetNews();
   return (
     <div className={styles.container}>
       <h2> Latest News</h2>
       <article>
+        {isLoading ? <Spinner /> : null}
         {data?.map((item: any) => {
           return (
             <NewsItem
