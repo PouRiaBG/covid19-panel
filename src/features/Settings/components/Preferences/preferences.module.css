@@ -25,3 +25,18 @@
 .orange {
   background-color: rgb(255, 122, 0) !important;
 }
+.themeBtn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 4rem !important;
+  background-color: #3b548e !important;
+  color: white !important;
+}
+.themeBtnLight {
+  color: black !important;
+  background-color: white !important;
+  border: 1px solid #3b548e !important;
+  border-left: 1px solid #3b548e !important;
+}
