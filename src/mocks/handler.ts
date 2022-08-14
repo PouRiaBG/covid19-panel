@@ -22,7 +22,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.set("Content-Type", "application/json"),
-      ctx.delay(1000),
+      ctx.delay(2000),
       ctx.json([
         {
           title: "IRAN",
@@ -71,6 +71,9 @@ export const handlers = [
         "Lorem ipsum dolor sit amet.Et quam consequatur At architecto corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum commod i repellendu",
       date: todayDate,
     });
-    return res(ctx.json(list));
+    return res(
+
+      ctx.delay(1000),
+      ctx.json(list));
   }),
 ];
