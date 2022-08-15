@@ -10,7 +10,7 @@ export function NewsList() {
       <h2> Latest News</h2>
       <article>
         {isLoading ? <Spinner /> : null}
-        {data?.map((item: any) => {
+        {data?.map((item) => {
           return (
             <NewsItem
               title={item.title}

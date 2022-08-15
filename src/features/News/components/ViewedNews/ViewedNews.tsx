@@ -10,7 +10,7 @@ export function ViewedNews() {
     <div className={styles.container}>
       <h2>Most Viewed</h2>
       {isLoading ? <Spinner /> : null}
-      {data?.map((item: any) => {
+      {data?.map((item) => {
         return (
           <NewsCard
             title={item.title}

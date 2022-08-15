@@ -1,7 +1,9 @@
 import styles from "./newsHeader.module.css";
 import { NewsHeaderItem } from "../NewsHeaderItem/NewsHeaderItem";
+import { useScreen } from "../../../../hooks/useScreen";
 
 export function NewsHeader() {
+  const { isMobile } = useScreen();
   return (
     <div className={styles.container}>
       <section>
@@ -17,23 +19,25 @@ export function NewsHeader() {
           </div>
         </div>
       </section>
-      <section>
-        <NewsHeaderItem
-          context="iran"
-          title="Lorem ipsum dolor sit amet. Et quam consequatur At architecto
+      {!isMobile ? (
+        <section>
+          <NewsHeaderItem
+            context="iran"
+            title="Lorem ipsum dolor sit amet. Et quam consequatur At architecto
             corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum
             commod  i repellendu"
-          date="08:05PM - 2 min read"
-        />
+            date="08:05PM - 2 min read"
+          />
 
-        <NewsHeaderItem
-          context="span"
-          title="Lorem ipsum dolor sit amet. Et quam consequatur At architecto
+          <NewsHeaderItem
+            context="span"
+            title="Lorem ipsum dolor sit amet. Et quam consequatur At architecto
             corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum
             commod  i repellendu"
-          date="08:05PM - 2 min read"
-        />
-      </section>
+            date="08:05PM - 2 min read"
+          />
+        </section>
+      ) : null}
     </div>
   );
 }

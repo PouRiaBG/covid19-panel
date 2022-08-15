@@ -20,3 +20,8 @@
     width: inherit;
   }
 }
+@media all and (max-width: 768px) {
+  .container img {
+    height: 30rem;
+  }
+}
