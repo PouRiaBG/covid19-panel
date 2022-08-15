@@ -35,7 +35,7 @@ export function AccountSettings() {
             }}
           />
         </div>
-        <Button className={styles.button} size="large" type="default">
+        <Button size="large" type="default">
           Change password
         </Button>
       </div>

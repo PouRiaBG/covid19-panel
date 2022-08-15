@@ -26,6 +26,7 @@
   background-color: rgb(255, 122, 0) !important;
 }
 .themeBtn {
+  border-radius: 0.5rem !important;
   display: flex !important;
   justify-content: center;
   align-items: center;

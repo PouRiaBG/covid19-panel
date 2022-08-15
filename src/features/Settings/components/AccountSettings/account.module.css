@@ -9,11 +9,11 @@
   margin-top: 1rem;
 }
 .input {
-  border-radius: 0.5rem;
-  padding: 1rem 1rem;
-  width: 15rem;
+  border-radius: 0.5rem !important;
+  padding: 1rem 1rem !important;
+  width: 17rem !important;
 }
-.button {
+button[class="ant-btn ant-btn-default ant-btn-lg"] {
   border-radius: 0.5rem;
   color: white;
   background-color: #3b548e;
@@ -21,6 +21,7 @@
   border: none;
   margin-top: 1rem;
 }
-.button:hover {
+button[class="ant-btn ant-btn-default ant-btn-lg"]:hover {
   background-color: #3b548e;
+  color: white;
 }

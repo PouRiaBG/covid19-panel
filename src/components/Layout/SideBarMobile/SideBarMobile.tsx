@@ -32,7 +32,7 @@ export function SideBarMobile() {
         onClose={onClose}
         visible={visible}
         drawerStyle={{
-          width: "20rem",
+          width: "30rem",
         }}
       >
         <div className={styles.itemsContainer}>
