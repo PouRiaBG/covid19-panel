@@ -100,3 +100,8 @@ select {
   src: url("./assets/fonts/Roboto/Roboto-Medium.ttf");
   font-family: roboto-md;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
