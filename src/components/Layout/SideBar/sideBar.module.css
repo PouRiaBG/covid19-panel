@@ -35,7 +35,15 @@
 }
 
 .items button {
-  transition: none;
+  transition: 0.3s ease-in;
+}
+
+.items button[class="ant-btn ant-btn-text ant-btn-lg"]:hover {
+  color: white;
+}
+
+.items button[class="ant-btn ant-btn-text ant-btn-lg"]:focus {
+  color: white;
 }
 
 .items a > button:hvoer {
