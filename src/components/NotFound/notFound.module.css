@@ -1,0 +1,17 @@
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  color: #3b548e;
+  font-family: robot-light;
+  font-size: 6rem;
+}
+
+.container h3 {
+  color: #b8becc;
+}

@@ -10,6 +10,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import "antd/dist/antd.min.css";
 import "./index.css";
+import { NotFoundScreen } from "./Pages/NotFoundScreen/NotFoundScreen";
 
 function App() {
   const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ function App() {
             <Route path="vaccine" element={<VaccineScreen />} />
             <Route path="news" element={<NewsScreen />} />
             <Route path="settings" element={<SettingsScreen />} />
+            <Route path="*" element={<NotFoundScreen />} />
           </Route>
         </Routes>
       </QueryClientProvider>
