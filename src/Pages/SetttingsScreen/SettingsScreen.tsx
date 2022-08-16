@@ -1,3 +1,4 @@
+import { ErrorBoundary } from "../../components/ErrorBoundary/ErrorBoundary";
 import {
   AccountSettings,
   Preferences,
@@ -5,9 +6,11 @@ import {
 import styles from "./settings.module.css";
 export function SettingsScreen() {
   return (
-    <div className={styles.container}>
-      <AccountSettings />
-      <Preferences />
-    </div>
+    <ErrorBoundary>
+      <div className={styles.container}>
+        <AccountSettings />
+        <Preferences />
+      </div>
+    </ErrorBoundary>
   );
 }

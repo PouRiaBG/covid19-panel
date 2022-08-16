@@ -1,3 +1,4 @@
+import { ErrorBoundary } from "../../components/ErrorBoundary/ErrorBoundary";
 import {
   ViewedNews,
   NewsHeader,
@@ -9,12 +10,14 @@ import styles from "./newsScreen.module.css";
 export function NewsScreen() {
   const { isMobile } = useScreen();
   return (
-    <div className={styles.container}>
-      {isMobile ? null : <NewsHeader />}
-      <section className={styles.articles}>
-        <NewsList />
-        {isMobile ? null : <ViewedNews />}
-      </section>
-    </div>
+    <ErrorBoundary>
+      <div className={styles.container}>
+        {isMobile ? null : <NewsHeader />}
+        <section className={styles.articles}>
+          <NewsList />
+          {isMobile ? null : <ViewedNews />}
+        </section>
+      </div>
+    </ErrorBoundary>
   );
 }
