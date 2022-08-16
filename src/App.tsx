@@ -11,13 +11,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "antd/dist/antd.min.css";
 import "./index.css";
 import { NotFoundScreen } from "./Pages/NotFoundScreen/NotFoundScreen";
+import { LoginModal } from "./features/login/components/LoginModal";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const queryClient = new QueryClient();
+  const location = useLocation();
+
+  let state = location.state as { backgroundLocation?: Location };
+  console.log({ state });
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Routes>
+        <Routes location={state?.backgroundLocation || location}>
           <Route path="/" element={<Layout />}>
             <Route index element={<DashboardScreen />} />
             <Route path="countries" element={<CountriesScreen />} />
@@ -27,6 +33,11 @@ function App() {
             <Route path="*" element={<NotFoundScreen />} />
           </Route>
         </Routes>
+        {state?.backgroundLocation && (
+          <Routes>
+            <Route path="/login" element={<LoginModal />} />
+          </Routes>
+        )}
       </QueryClientProvider>
     </>
   );
