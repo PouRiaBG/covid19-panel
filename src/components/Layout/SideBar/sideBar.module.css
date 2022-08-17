@@ -39,11 +39,7 @@
 }
 
 .items button[class="ant-btn ant-btn-text ant-btn-lg"]:hover {
-  color: white;
-}
-
-.items button[class="ant-btn ant-btn-text ant-btn-lg"]:focus {
-  color: white;
+  background-color: inherit;
 }
 
 .items a > button:hvoer {

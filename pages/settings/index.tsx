@@ -1,10 +1,8 @@
-import { ErrorBoundary } from "../../components/ErrorBoundary/ErrorBoundary";
-import {
-  AccountSettings,
-  Preferences,
-} from "../../features/Settings/components";
+import { ErrorBoundary } from "@components/ErrorBoundary/ErrorBoundary";
+import { AccountSettings, Preferences } from "@features/settings/components";
 import styles from "./settings.module.css";
-export function SettingsScreen() {
+
+export default function SettingsPage() {
   return (
     <ErrorBoundary>
       <div className={styles.container}>

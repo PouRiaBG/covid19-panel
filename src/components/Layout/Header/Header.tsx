@@ -1,12 +1,12 @@
 import { SearchOutlined, UserOutlined } from "@ant-design/icons";
 import { Avatar, Button, Input } from "antd";
-import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./header.module.css";
+import { useRouter } from "next/router";
 export function Header() {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+
   const openLoginModal = () => {
-    navigate("/login", { state: { backgroundLocation: location } });
+    router.push("/login");
   };
   return (
     <header className={styles.container}>

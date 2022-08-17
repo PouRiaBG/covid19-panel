@@ -7,12 +7,10 @@ import { Button, Drawer } from "antd";
 import { useEffect, useState } from "react";
 import { useSideRoutes } from "../../../hooks/useSideRoutes";
 import styles from "./sidebarmobile.module.css";
-import { NavLink, useLocation } from "react-router-dom";
 
 export function SideBarMobile() {
   const [visible, setVisible] = useState(false);
   const ROUTES = useSideRoutes();
-  const location = useLocation();
 
   useEffect(() => {
     setVisible(false);

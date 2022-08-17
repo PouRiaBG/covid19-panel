@@ -1,4 +1,4 @@
-import { Spinner } from "../../../../components/Spinner/Spinner";
+import { Spinner } from "@components/Spinner/Spinner";
 import { useGetViewedNews } from "../../api/useGetViewedNews";
 import styles from "./news.module.css";
 import { NewsCard } from "./NewsCard/NewsCard";

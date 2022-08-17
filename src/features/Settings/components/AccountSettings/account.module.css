@@ -13,7 +13,7 @@
   padding: 1rem 1rem !important;
   width: 17rem !important;
 }
-button[class="ant-btn ant-btn-default ant-btn-lg"] {
+.item button[class="ant-btn ant-btn-default ant-btn-lg"] {
   border-radius: 0.5rem;
   color: white;
   background-color: #3b548e;
@@ -21,7 +21,7 @@ button[class="ant-btn ant-btn-default ant-btn-lg"] {
   border: none;
   margin-top: 1rem;
 }
-button[class="ant-btn ant-btn-default ant-btn-lg"]:hover {
+.item button[class="ant-btn ant-btn-default ant-btn-lg"]:hover {
   background-color: #3b548e;
   color: white;
 }

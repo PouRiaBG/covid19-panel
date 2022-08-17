@@ -1,1 +1,0 @@
-export { VaccineScreen } from "./VaccineScreen";

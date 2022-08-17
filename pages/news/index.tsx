@@ -1,13 +1,9 @@
-import { ErrorBoundary } from "../../components/ErrorBoundary/ErrorBoundary";
-import {
-  ViewedNews,
-  NewsHeader,
-  NewsList,
-} from "../../features/News/components";
-import { useScreen } from "../../hooks/useScreen";
+import { ErrorBoundary } from "@components/ErrorBoundary/ErrorBoundary";
+import { ViewedNews, NewsHeader, NewsList } from "@features/news/components";
+import { useScreen } from "@hooks/useScreen";
 import styles from "./newsScreen.module.css";
 
-export function NewsScreen() {
+export default function NewsPage() {
   const { isMobile } = useScreen();
   return (
     <ErrorBoundary>

@@ -15,19 +15,19 @@ export const useSideRoutes = () => {
 
     {
       name: "Countries",
-      path: "countries",
+      path: "/countries",
       icon: <AppstoreOutlined />,
     },
 
     {
       name: "Vaccine",
-      path: "vaccine",
+      path: "/vaccine",
       icon: <UserSwitchOutlined />,
     },
 
     {
       name: "News",
-      path: "news",
+      path: "/news",
       icon: <ExclamationCircleOutlined />,
     },
   ];

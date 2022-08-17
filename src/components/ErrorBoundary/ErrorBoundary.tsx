@@ -5,7 +5,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export function ErrorBoundary(props: IProps) {
+function ErrorBoundary(props: IProps) {
   const { children } = props;
   return (
     <ReactErrorBoundary FallbackComponent={FallBackComponent}>
@@ -13,3 +13,5 @@ export function ErrorBoundary(props: IProps) {
     </ReactErrorBoundary>
   );
 }
+
+export { ErrorBoundary };

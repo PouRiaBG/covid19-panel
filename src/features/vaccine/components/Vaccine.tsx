@@ -14,7 +14,7 @@ import { Line } from "react-chartjs-2";
 import { useQuery } from "@tanstack/react-query";
 import { Input } from "antd";
 import { useState } from "react";
-import { Spinner } from "../../../components/Spinner/Spinner";
+import { Spinner } from "@components/Spinner/Spinner";
 
 ChartJS.register(
   CategoryScale,

@@ -1,10 +1,11 @@
 import styles from "./sideBar.module.css";
 import { Button } from "antd";
 import { SettingOutlined, UserSwitchOutlined } from "@ant-design/icons";
-import { NavLink } from "react-router-dom";
-import { useScreen } from "../../../hooks/useScreen";
+import { useScreen } from "@hooks/useScreen";
 import classnames from "classnames";
-import { useSideRoutes } from "../../../hooks/useSideRoutes";
+import { useSideRoutes } from "@hooks/useSideRoutes";
+import Link from "next/link";
+import { NavLink } from "@components/NavLink/NavLink";
 export function SideBar() {
   const { isDesktop, isTablet } = useScreen();
   const ROUTES = useSideRoutes();
@@ -33,11 +34,10 @@ export function SideBar() {
           {ROUTES.map((item) => {
             return (
               <NavLink
+                className=""
+                activeClass={styles.activeItem}
                 key={item.path}
-                to={item.path}
-                className={({ isActive }) =>
-                  isActive ? styles.activeItem : undefined
-                }
+                pathname={item.path}
               >
                 {isDesktop && (
                   <Button icon={item.icon} type="text" size="large">
@@ -54,6 +54,7 @@ export function SideBar() {
         </div>
       </div>
       <div
+        suppressHydrationWarning={true}
         className={classnames({
           [styles.items]: true,
           [styles.itemsTablet]: isTablet,
@@ -62,22 +63,12 @@ export function SideBar() {
       >
         {isDesktop && (
           <>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : undefined
-              }
-              to="F&Q"
-            >
+            <NavLink activeClass={styles.activeItem} pathname="/F&Q">
               <Button icon={<UserSwitchOutlined />} type="text" size="large">
                 F&Q
               </Button>
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : styles.test
-              }
-              to="settings"
-            >
+            <NavLink activeClass={styles.activeItem} pathname="/settings">
               <Button icon={<SettingOutlined />} type="text" size="large">
                 Settings
               </Button>
@@ -87,20 +78,10 @@ export function SideBar() {
 
         {isTablet && (
           <>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : undefined
-              }
-              to="F&Q"
-            >
+            <NavLink activeClass={styles.activeItem} pathname="/F&Q">
               <Button icon={<UserSwitchOutlined />} type="text" size="large" />
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : styles.test
-              }
-              to="settings"
-            >
+            <NavLink activeClass={styles.activeItem} pathname="/settings">
               <Button icon={<SettingOutlined />} type="text" size="large" />
             </NavLink>
           </>

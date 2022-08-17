@@ -1,6 +1,6 @@
 import styles from "./newsHeader.module.css";
 import { NewsHeaderItem } from "../NewsHeaderItem/NewsHeaderItem";
-import { useScreen } from "../../../../hooks/useScreen";
+import { useScreen } from "@hooks/useScreen";
 
 export function NewsHeader() {
   const { isMobile } = useScreen();
