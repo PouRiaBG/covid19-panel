@@ -6,18 +6,19 @@ import src4 from "../assets/images/covid-image4.jpg";
 import src5 from "../assets/images/covid-image5.jpg";
 
 export const handlers = [
-  rest.post("/login", (req, res, ctx) => {
-    sessionStorage.setItem("is-authenticated", "true");
-
-    res(ctx.status(200));
-  }),
-  rest.get("/user", (req, res, ctx) => {
+  rest.post("/login", async (req, res, ctx) => {
+    console.log({ req });
     return res(
-      ctx.status(200),
-      ctx.set("Content-Type", "application/json"),
-      ctx.json({ name: "pouria" })
+      ctx.cookie('auth-token', 'abc-123'),
     );
   }),
+  // rest.get("/user", (req, res, ctx) => {
+  //   return res(
+  //     ctx.status(200),
+  //     ctx.set("Content-Type", "application/json"),
+  //     ctx.json({ name: "pouria" })
+  //   );
+  // }),
   rest.get("/news", (req, res, ctx) => {
     return res(
       ctx.status(200),
@@ -71,9 +72,6 @@ export const handlers = [
         "Lorem ipsum dolor sit amet.Et quam consequatur At architecto corporis ea itaque distinctio vel nobis architecto ut nostrum ipsum commod i repellendu",
       date: todayDate,
     });
-    return res(
-
-      ctx.delay(1000),
-      ctx.json(list));
+    return res(ctx.delay(1000), ctx.json(list));
   }),
 ];
