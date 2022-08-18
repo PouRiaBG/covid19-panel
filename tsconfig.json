@@ -6,7 +6,8 @@
       "@features/*": ["src/features/*"],
       "@pages/*": ["pages/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
