@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SingletonRouter, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 interface IProps {
   children: ReactNode;
