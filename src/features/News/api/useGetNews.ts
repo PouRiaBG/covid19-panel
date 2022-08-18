@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import { request } from "@utils/request";
 import type { NewsListType } from "../types";
 
-export const useGetNews = () => {
-  return useQuery<NewsListType>(["newsList"], async () => {
-    return fetch("/news")
-      .then((response) => response.json())
-      .then((data) => data);
+export const useGetNews = (key: string) => {
+  return useQuery<NewsListType>([key], async () => {
+    return await request("/news");
   });
 };

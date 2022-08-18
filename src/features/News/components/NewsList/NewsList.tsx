@@ -1,16 +1,19 @@
 import { Spinner } from "@components/Spinner/Spinner";
-import { useGetNews } from "../../api/useGetNews";
 import { NewsItem } from "../NewsItem/NewsItem";
 import styles from "./newsList.module.css";
 import { v4 as uuidv4 } from "uuid";
+import { NewsListType } from "@features/news/types";
 
-export function NewsList() {
-  const { data, isLoading } = useGetNews();
+interface IProps {
+  data: NewsListType;
+}
+export function NewsList(props: IProps) {
+  const { data } = props;
   return (
     <div className={styles.container}>
       <h2> Latest News</h2>
       <article>
-        {isLoading ? <Spinner /> : null}
+        {/* {isLoading ? <Spinner /> : null} */}
         {data?.map((item) => {
           return (
             <NewsItem
