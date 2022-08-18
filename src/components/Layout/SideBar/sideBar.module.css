@@ -16,16 +16,9 @@
   display: flex;
   align-items: center;
 }
-.headerTablet {
-  justify-content: center;
-}
 .items {
   display: flex;
   flex-direction: column;
-}
-.itemsTablet {
-  justify-content: center;
-  align-items: center;
 }
 .items a {
   padding: 1rem 0rem;
@@ -42,7 +35,7 @@
   background-color: inherit;
 }
 
-.items a > button:hvoer {
+.items a > button:hover {
   color: white;
   transition: none;
 }
@@ -53,6 +46,27 @@
 .activeItem button {
   color: white;
 }
+
+.tabletButtons {
+  display: none;
+}
+.desktopButtons {
+}
 .footerItems {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 5rem;
+  }
+  .tabletButtons {
+    display: flex;
+  }
+  .desktopButtons {
+    display: none;
+  }
+  .header {
+    justify-content: center;
+  }
 }
