@@ -4,7 +4,7 @@ export function request(endpoint: string, customConfig = {}) {
     ...customConfig,
   };
 
-  return window.fetch(endpoint, config).then(async (response) => {
+  return fetch(endpoint, config).then(async (response) => {
     if (response.ok) {
       return await response.json();
     } else {
