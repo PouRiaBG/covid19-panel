@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import React from "react";
 import "antd/dist/antd.min.css";
 import "../styles/globals.css";
+import "../styles/antReset.css";
 import {
   Hydrate,
   QueryClient,
