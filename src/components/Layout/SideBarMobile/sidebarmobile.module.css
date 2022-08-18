@@ -1,6 +1,7 @@
 .container {
   width: 4rem;
   height: 100vh;
+  display: none;
 }
 .itemsContainer {
   height: 100%;
@@ -18,16 +19,16 @@
 .activeItem {
   border-left: 6px solid #3b548e;
 }
-button[class="ant-btn ant-btn-default ant-btn-lg ant-btn-icon-only"] {
+.container
+  button[class="ant-btn ant-btn-default ant-btn-lg ant-btn-icon-only"] {
   background: #3b548e !important;
   color: white;
   border-radius: 4px;
   border: none;
 }
-div[class="ant-drawer-content"] {
-  box-shadow: none !important;
-}
 
-div[class="ant-drawer-left"] {
-  box-shadow: none !important;
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
 }

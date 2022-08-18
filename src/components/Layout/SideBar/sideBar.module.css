@@ -50,8 +50,6 @@
 .tabletButtons {
   display: none;
 }
-.desktopButtons {
-}
 .footerItems {
   margin-bottom: 1rem;
 }
@@ -68,5 +66,11 @@
   }
   .header {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
   }
 }

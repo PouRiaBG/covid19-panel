@@ -8,14 +8,13 @@ interface IProps {
   children: ReactNode;
 }
 export function Layout(props: IProps) {
-  const { isMobile } = useScreen();
   const { children } = props;
   return (
     <div className={styles.container}>
-      {/* {isMobile ? <SideBarMobile /> : <SideBar />} */}
+      <SideBarMobile />
       <SideBar />
       <div className={styles.main}>
-        {isMobile ? null : <Header />}
+        <Header />
         {children}
       </div>
     </div>

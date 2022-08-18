@@ -28,3 +28,8 @@
   color: white;
   background: #3b548e;
 }
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

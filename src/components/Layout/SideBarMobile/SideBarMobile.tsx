@@ -3,22 +3,18 @@ import {
   SettingOutlined,
   UserSwitchOutlined,
 } from "@ant-design/icons";
-import { Button, Drawer } from "antd";
-import { useEffect, useState } from "react";
-import { useSideRoutes } from "../../../hooks/useSideRoutes";
+import { NavLink } from "@components/NavLink/NavLink";
+import { Button } from "antd";
+import { useState } from "react";
+import { useSideRoutes } from "@hooks/useSideRoutes";
 import styles from "./sidebarmobile.module.css";
+import { DrawerSide } from "@components/Drawer";
 
 export function SideBarMobile() {
-  const [visible, setVisible] = useState(false);
   const ROUTES = useSideRoutes();
 
-  useEffect(() => {
-    setVisible(false);
-  }, [location]);
+  const [visible, setVisible] = useState(false);
 
-  const onClose = () => {
-    setVisible(false);
-  };
   const onClickHandler = () => {
     setVisible(true);
   };
@@ -30,25 +26,15 @@ export function SideBarMobile() {
         size="large"
         icon={<MenuOutlined />}
       />
-      <Drawer
-        title="Sibar Menu"
-        placement="left"
-        onClose={onClose}
-        visible={visible}
-        drawerStyle={{
-          width: "30rem",
-        }}
-      >
+      <DrawerSide setVisible={setVisible} visible={visible}>
         <div className={styles.itemsContainer}>
           <div className={styles.items}>
             {ROUTES.map((item) => {
               return (
                 <NavLink
                   key={item.path}
-                  to={item.path}
-                  className={({ isActive }) =>
-                    isActive ? styles.activeItem : undefined
-                  }
+                  pathname={item.path}
+                  activeClass={styles.activeItem}
                 >
                   <Button icon={item.icon} type="text" size="large">
                     {item.name}
@@ -57,31 +43,20 @@ export function SideBarMobile() {
               );
             })}
           </div>
-
           <div className={styles.items}>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : undefined
-              }
-              to="F&Q"
-            >
+            <NavLink pathname="/F&Q" activeClass={styles.activeItem}>
               <Button icon={<UserSwitchOutlined />} type="text" size="large">
                 F&Q
               </Button>
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : styles.test
-              }
-              to="settings"
-            >
+            <NavLink pathname="/settings" activeClass={styles.activeItem}>
               <Button icon={<SettingOutlined />} type="text" size="large">
                 Settings
               </Button>
             </NavLink>
           </div>
         </div>
-      </Drawer>
+      </DrawerSide>
     </div>
   );
 }
