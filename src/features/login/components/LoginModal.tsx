@@ -16,7 +16,7 @@ export function LoginModal() {
   };
   return (
     <Modal
-      title="Modal"
+      title="Login modal"
       visible={true}
       destroyOnClose={true}
       onCancel={() => navigate(-1)}
@@ -26,11 +26,13 @@ export function LoginModal() {
     >
       <Form onFinish={onFinish}>
         <Form.Item name="username">
-          <Input type="text" placeholder="username " />
+          <Input type="text" placeholder="username" className={styles.input} />
         </Form.Item>
 
         <Form.Item>
-          <Button htmlType="submit">Login</Button>
+          <Button className={styles.btn} htmlType="submit">
+            Login
+          </Button>
         </Form.Item>
       </Form>
     </Modal>

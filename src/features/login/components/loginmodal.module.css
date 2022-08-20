@@ -1,3 +1,20 @@
-.testClass {
+/* .testClass {
   background-color: red;
+} */
+.btn {
+  background-color: #3b548e;
+  border-radius: 0.5rem;
+  color: white;
+  width: 100%;
+  border: none;
+}
+.btn:hover {
+  color: white;
+  background-color: #3b548e;
+}
+.input {
+  border-radius: 0.5rem;
+}
+.input:hover {
+  border: 1px solid inherit;
 }
