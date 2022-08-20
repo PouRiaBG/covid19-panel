@@ -3,7 +3,7 @@ import {
   ViewedNews,
   NewsHeader,
   NewsList,
-} from "../../features/News/components";
+} from "../../features/news/components";
 import { useScreen } from "../../hooks/useScreen";
 import styles from "./newsScreen.module.css";
 
