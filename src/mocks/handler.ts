@@ -7,18 +7,14 @@ import src5 from "../assets/images/covid-image5.jpg";
 
 export const handlers = [
   rest.post("/login", async (req, res, ctx) => {
-    console.log({ req });
+    const { username } = await req.json();
     return res(
-      ctx.cookie('auth-token', 'abc-123'),
+      ctx.status(200),
+      ctx.set("Content-Type", "application/json"),
+      ctx.json({ username: username }),
+      ctx.cookie("token", "abcd1234")
     );
   }),
-  // rest.get("/user", (req, res, ctx) => {
-  //   return res(
-  //     ctx.status(200),
-  //     ctx.set("Content-Type", "application/json"),
-  //     ctx.json({ name: "pouria" })
-  //   );
-  // }),
   rest.get("/news", (req, res, ctx) => {
     return res(
       ctx.status(200),

@@ -1,19 +1,57 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
 import { Button, Form, Input, Modal } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useAuthStore } from "../../../store/authStore";
+import { useLoginUser } from "../api/useLoginUser";
+import { Username } from "../types";
 import styles from "./loginmodal.module.css";
+import { notification } from "antd";
+
+type NotificationType = "success" | "error";
 
 export function LoginModal() {
   const navigate = useNavigate();
-  const { mutate } = useMutation(async () => {
-    return fetch("/login", { method: "POST" }).then((response) =>
-      console.log({ response })
-    );
-  });
+  const setCredential = useAuthStore((state) => state.setCredential);
 
-  const onFinish = (values: any) => {
-    mutate(values);
+  const { mutate } = useLoginUser();
+
+  const openNotificationWithIcon = (type: NotificationType) => {
+    const notifMessages = {
+      error: {
+        message: "Login faild",
+        description: "Somthin went wrong",
+      },
+
+      success: {
+        message: "Login successed",
+        description: "You have successfully logged in",
+      },
+    };
+    notification[type]({
+      message: notifMessages[type].message,
+      description: "You have successfully logged in",
+    });
   };
+
+  const onFinish = (values: Username) => {
+    mutate(
+      { username: values.username },
+      {
+        onSuccess: (data) => {
+          console.log({ data });
+          openNotificationWithIcon("success");
+          setCredential({
+            isUser: true,
+            username: data.username,
+          });
+          navigate(-1);
+        },
+        onError: () => {
+          openNotificationWithIcon("error");
+        },
+      }
+    );
+  };
+
   return (
     <Modal
       title="Login modal"
@@ -26,7 +64,12 @@ export function LoginModal() {
     >
       <Form onFinish={onFinish}>
         <Form.Item name="username">
-          <Input type="text" placeholder="username" className={styles.input} />
+          <Input
+            required
+            type="text"
+            placeholder="username"
+            className={styles.input}
+          />
         </Form.Item>
 
         <Form.Item>
