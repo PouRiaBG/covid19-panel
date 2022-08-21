@@ -1,13 +1,13 @@
 import { SearchOutlined, UserOutlined } from "@ant-design/icons";
-import { Avatar, Button, Input } from "antd";
+import { Avatar, Button, Dropdown, Input, Menu } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuthStore } from "../../../store/authStore";
+import { UserDropdown } from "../../Dropdown/UserDropdown";
 import styles from "./header.module.css";
 export function Header() {
   const navigate = useNavigate();
   const location = useLocation();
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
-  const username = useAuthStore((state) => state.username);
 
   const openLoginModal = () => {
     navigate("/login", { state: { backgroundLocation: location } });
@@ -26,9 +26,7 @@ export function Header() {
       <div className={styles.account}>
         <div className={styles.info}>
           {isAuthenticated ? (
-            <>
-              <h3>Hello, {username}</h3>
-            </>
+            <UserDropdown />
           ) : (
             <Button
               onClick={openLoginModal}
