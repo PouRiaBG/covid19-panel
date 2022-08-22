@@ -72,6 +72,7 @@ export function Vaccine() {
 
   return (
     <div className={styles.container}>
+      <h2>Vaccine stats</h2>
       <Input
         placeholder="Enter country name.."
         value={input}

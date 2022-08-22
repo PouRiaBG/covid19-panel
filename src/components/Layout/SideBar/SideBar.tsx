@@ -33,6 +33,7 @@ export function SideBar() {
           {ROUTES.map((item) => {
             return (
               <NavLink
+                data-testid={item.name}
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
@@ -60,32 +61,35 @@ export function SideBar() {
           [styles.footerItems]: true,
         })}
       >
-        {isDesktop && (
-          <>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : undefined
-              }
-              to="F&Q"
-            >
-              <Button icon={<UserSwitchOutlined />} type="text" size="large">
-                F&Q
-              </Button>
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.activeItem : styles.test
-              }
-              to="settings"
-            >
-              <Button icon={<SettingOutlined />} type="text" size="large">
-                Settings
-              </Button>
-            </NavLink>
-          </>
-        )}
+        {/* <NavLink
+          className={({ isActive }) =>
+            isActive ? styles.activeItem : undefined
+          }
+          to="F&Q"
+        >
+          <Button icon={<UserSwitchOutlined />} type="text" size="large">
+            F&Q
+          </Button>
+        </NavLink> */}
+        <NavLink
+          data-testid="Settings"
+          className={({ isActive }) =>
+            isActive ? styles.activeItem : styles.test
+          }
+          to="settings"
+        >
+          {isDesktop && (
+            <Button icon={<SettingOutlined />} type="text" size="large">
+              Settings
+            </Button>
+          )}
 
-        {isTablet && (
+          {isTablet && (
+            <Button icon={<SettingOutlined />} type="text" size="large" />
+          )}
+        </NavLink>
+
+        {/* {isTablet && (
           <>
             <NavLink
               className={({ isActive }) =>
@@ -96,6 +100,7 @@ export function SideBar() {
               <Button icon={<UserSwitchOutlined />} type="text" size="large" />
             </NavLink>
             <NavLink
+              data-testid="Settings"
               className={({ isActive }) =>
                 isActive ? styles.activeItem : styles.test
               }
@@ -104,7 +109,7 @@ export function SideBar() {
               <Button icon={<SettingOutlined />} type="text" size="large" />
             </NavLink>
           </>
-        )}
+        )} */}
       </div>
     </aside>
   );
