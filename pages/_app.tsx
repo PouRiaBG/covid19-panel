@@ -3,6 +3,7 @@ import React from "react";
 import "antd/dist/antd.min.css";
 import "../styles/globals.css";
 import "../styles/antReset.css";
+import Head from "next/head";
 import {
   Hydrate,
   QueryClient,
@@ -14,12 +15,17 @@ require("../src/mocks");
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = React.useState(() => new QueryClient());
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Hydrate>
-    </QueryClientProvider>
+    <>
+      <Head>
+        <title>Covid Tracker</title>
+      </Head>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Hydrate>
+      </QueryClientProvider>
+    </>
   );
 }
