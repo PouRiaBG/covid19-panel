@@ -1,10 +1,14 @@
 import { PlusOutlined } from "@ant-design/icons";
+import { AllStats } from "@features/statistics/types";
 import { Statistic } from "antd";
-import { useGetStats } from "../../api/useGetStats";
 import styles from "./stats.module.css";
 
-export function Stats() {
-  const { data, isLoading } = useGetStats();
+interface IProps {
+  data: AllStats;
+  isLoading: boolean;
+}
+export function Stats(props: IProps) {
+  const { data, isLoading } = props;
   return (
     <>
       <div className={styles.cards}>
