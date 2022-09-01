@@ -41,13 +41,23 @@ export function SideBar() {
                 }
               >
                 {isDesktop && (
-                  <Button icon={item.icon} type="text" size="large">
+                  <Button
+                    disabled={item.isDisabled}
+                    icon={item.icon}
+                    type="text"
+                    size="large"
+                  >
                     {item.name}
                   </Button>
                 )}
 
                 {isTablet && (
-                  <Button icon={item.icon} type="text" size="large" />
+                  <Button
+                    disabled={item.isDisabled}
+                    icon={item.icon}
+                    type="text"
+                    size="large"
+                  />
                 )}
               </NavLink>
             );

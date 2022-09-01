@@ -52,7 +52,12 @@ export function SideBarMobile() {
                     isActive ? styles.activeItem : undefined
                   }
                 >
-                  <Button icon={item.icon} type="text" size="large">
+                  <Button
+                    disabled={item.isDisabled}
+                    icon={item.icon}
+                    type="text"
+                    size="large"
+                  >
                     {item.name}
                   </Button>
                 </NavLink>
@@ -61,7 +66,7 @@ export function SideBarMobile() {
           </div>
 
           <div className={styles.items}>
-            <NavLink
+            {/* <NavLink
               className={({ isActive }) =>
                 isActive ? styles.activeItem : undefined
               }
@@ -70,7 +75,7 @@ export function SideBarMobile() {
               <Button icon={<UserSwitchOutlined />} type="text" size="large">
                 F&Q
               </Button>
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className={({ isActive }) =>
                 isActive ? styles.activeItem : styles.test
