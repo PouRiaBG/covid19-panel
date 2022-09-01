@@ -18,7 +18,7 @@ export function LoginModal() {
     const notifMessages = {
       error: {
         message: "Login faild",
-        description: "Somthin went wrong",
+        description: "Somthing went wrong",
       },
 
       success: {
@@ -28,7 +28,7 @@ export function LoginModal() {
     };
     notification[type]({
       message: notifMessages[type].message,
-      description: "You have successfully logged in",
+      description: notifMessages[type].description,
     });
   };
 
