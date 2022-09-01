@@ -148,6 +148,7 @@ export function Countries() {
     <>
       <div className={styles.container}>
         <Table
+          rowKey={(row) => row.country}
           loading={isLoading}
           tableLayout="auto"
           scroll={{ y: tableHeight }}
