@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuthStore } from "../../../store/authStore";
 import { UserDropdown } from "../../Dropdown/UserDropdown";
 import styles from "./header.module.css";
+import userSrc from "../../../assets/images/photo.jpg";
 export function Header() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -38,7 +39,11 @@ export function Header() {
           )}
         </div>
         <div className={styles.avatar}>
-          <Avatar size={44} icon={<UserOutlined />} />
+          {isAuthenticated ? (
+            <Avatar src={userSrc} size={44} icon={<UserOutlined />} />
+          ) : (
+            <Avatar size={44} icon={<UserOutlined />} />
+          )}
         </div>
       </div>
     </header>
