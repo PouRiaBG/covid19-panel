@@ -9,10 +9,9 @@ import { countries } from "../../../constant/countries";
 const columns: ColumnsType<CountriesStats> = [
   {
     title: "Flag",
-
     width: 100,
     dataIndex: "countryInfo",
-    responsive: ["xxl", "xs"],
+    // responsive: ["xxl", "xs"],
     render: (info) => {
       return (
         <span>
@@ -29,24 +28,21 @@ const columns: ColumnsType<CountriesStats> = [
   {
     title: "Total cases",
     dataIndex: "cases",
-    responsive: ["xs"],
-
+    // responsive: ["xs"],
     width: 200,
   },
 
   {
     title: "Total Deaths",
     dataIndex: "deaths",
-
     width: 200,
-    responsive: ["xs"],
+    // responsive: ["xs"],
   },
   {
     title: "Today cases",
     dataIndex: "todayCases",
-
     width: 200,
-    responsive: ["xxl", "xs", "xl"],
+    // responsive: ["xxl", "xs", "xl"],
     render: (data) => {
       return (
         <span style={{ color: "#63B4A1 " }}>
@@ -61,9 +57,8 @@ const columns: ColumnsType<CountriesStats> = [
   {
     title: "Today Deaths",
     dataIndex: "todayDeaths",
-
     width: 200,
-    responsive: ["xxl", "xs", "xl"],
+    // responsive: ["xxl", "xs", "xl"],
     render: (data) => {
       return (
         <span style={{ color: "red" }}>
