@@ -15,11 +15,8 @@
   max-width: 60rem;
   max-height: 30rem;
 }
-.searchInput {
-  width: 25rem !important;
-  height: 3rem;
-  border-radius: 1rem !important;
-}
-.searchInput:hover {
-  border: 1px solid #9e9e9e;
+.options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
