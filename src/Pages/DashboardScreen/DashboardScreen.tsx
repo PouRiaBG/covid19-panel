@@ -1,5 +1,5 @@
 import { ErrorBoundary } from "../../components/ErrorBoundary/ErrorBoundary";
-import { Chart, Stats } from "../../features/statistics/components";
+import { Chart, Stats } from "../../features/Statistics/components";
 import { useScreen } from "../../hooks/useScreen";
 import styles from "./dashboard.module.css";
 
