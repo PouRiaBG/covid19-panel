@@ -7,6 +7,7 @@ export function UserDropdown() {
   const username = useAuthStore((state) => state.username);
   const logout = useAuthStore((state) => state.logout);
   const navigate = useNavigate();
+
   const menu = (
     <Menu
       items={[
